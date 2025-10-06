@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Use and Misuse of Cell Phones</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056d2">
+</head>
+<body>
+    <header>
+        <h1>Use and Misuse of Cell Phones</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    </header>
+    <nav>
+        <a href="index.html" class="nav-active">Home</a>
+        <a href="team.html">Team</a>
+        <a href="problem.html">Problem</a>
+        <a href="idea.html">Project Idea</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="workflow.html">Work Flow</a>
+        <a href="uses.html">Uses</a>
+        <a href="misuses.html">Misuses</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="dashboard.html">Dashboard</a>
+      
+        <a href="conclusion.html">Conclusion</a>
+        
+    </nav>
+
+    <main>
+        <h2>Welcome to Mobile Awareness Project</h2>
+        
+        <div class="hero-section">
+            <div class="hero-content">
+                <h3>Balancing Digital Life</h3>
+                <p>Explore the positive impacts and potential dangers of mobile phone usage in our digital age.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="location.href='quiz.html'">Take Quiz</button>
+                    <button class="btn-secondary" onclick="location.href='tracker.html'">Track Usage</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" onclick="location.href='uses.html'">
+                <h4>📱 Positive Uses</h4>
+                <p>Discover how mobile phones can enhance education, communication, and productivity.</p>
+            </div>
+            
+            <div class="feature-card" onclick="location.href='misuses.html'">
+                <h4>⚠️ Common Misuses</h4>
+                <p>Learn about addiction, health impacts, and other negative effects of mobile overuse.</p>
+            </div>
+            
+            <div class="feature-card" onclick="location.href='solutions.html'">
+                <h4>💡 Solutions</h4>
+                <p>Practical strategies for balanced mobile usage and digital wellbeing.</p>
+            </div>
+            
+            <div class="feature-card" onclick="location.href='dashboard.html'">
+                <h4>📊 Analytics</h4>
+                <p>View statistics and data visualizations about mobile usage patterns.</p>
+            </div>
+        </div>
+
+        <div class="quick-stats">
+            <h3>Quick Statistics</h3>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" id="avgScreenTime">3.5h</span>
+                    <span class="stat-label">Avg. Daily Screen Time</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="addictionRate">42%</span>
+                    <span class="stat-label">Addiction Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="productiveUse">35%</span>
+                    <span class="stat-label">Productive Use</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Use and Misuse of Cell Phones Project</p>
+            <p id="lastUpdated">Last updated: <span id="updateDate"></span></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

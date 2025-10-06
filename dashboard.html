@@ -1,0 +1,121 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Use and Misuse of Cell Phones</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Use and Misuse of Cell Phones</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="problem.html">Problem</a>
+        <a href="idea.html">Project Idea</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="workflow.html">Work Flow</a>
+        <a href="uses.html">Uses</a>
+        <a href="misuses.html">Misuses</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="dashboard.html" class="nav-active">Dashboard</a>
+        <a href="geotag.html">GeoTag</a>
+        <a href="video.html">Video</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>Analytics Dashboard</h2>
+        
+        <div class="dashboard-header">
+            <div class="date-filter">
+                <label>Time Period:</label>
+                <select id="timePeriod" onchange="updateDashboard()">
+                    <option value="7">Last 7 Days</option>
+                    <option value="30">Last 30 Days</option>
+                    <option value="90">Last 3 Months</option>
+                </select>
+            </div>
+            <button class="btn-secondary" onclick="exportData()">Export Data</button>
+        </div>
+
+        <div class="stats-overview">
+            <div class="stat-card">
+                <div class="stat-icon">📱</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="avgDailyTime">--</div>
+                    <div class="stat-label">Avg. Daily Usage</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="goalAchievement">--</div>
+                    <div class="stat-label">Goal Achievement</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="productivityScore">--</div>
+                    <div class="stat-label">Productivity Score</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="daysTracked">--</div>
+                    <div class="stat-label">Days Tracked</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container full-width">
+                <h4>Daily Screen Time Trend</h4>
+                <canvas id="timeTrendChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h4>Activity Distribution</h4>
+                <canvas id="activityPieChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h4>Productivity vs Leisure</h4>
+                <canvas id="productivityChart"></canvas>
+            </div>
+
+            <div class="chart-container full-width">
+                <h4>Weekly Pattern Analysis</h4>
+                <canvas id="weeklyPatternChart"></canvas>
+            </div>
+
+            <div class="chart-container full-width">
+                <h4>Usage Insights & Recommendations</h4>
+                <div id="insightsContainer" class="insights-container">
+                    <!-- Insights will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Use and Misuse of Cell Phones Project</p>
+            <p>Last updated: <span id="updateDate"></span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
